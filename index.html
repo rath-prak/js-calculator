@@ -1,52 +1,84 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Dev Calculator</title>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-	<script type="text/javascript" src="js/script.js"></script>
+	<title>JS CALCULATOR</title>
 
-	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
 </head>
 
 <body>
-	<div id="container">
+	<div id="cal_Container"> <!-- all code goes into this container div -->
+		<p id="title">DEV CALCULATOR</p>
+		<form>
+			<input type="text" id="display_answer" disabled> 
 
-	<!-- 	<h1>CALCULATOR</h1> -->
+			<input type="button" value="CLEAR" id="clearButton" onclick="buttonValue('CLEAR')">
+			<input type="button" value="&times;" class="btn opp" onclick="buttonValue('*')">
+			<input type="button" value="&divide;" class="btn opp" onclick="buttonValue('/')">
 
-		<div id="output">
-			<div id="clear" onclick=calculator("C")>C</div>
-<!-- 			<div id="answer" input type="value"></div>
- -->			<input type="text" readonly="" id="answer">
-		</div> <!-- end of output div -->
+			<input type="button" value="7" class="btn" onclick="buttonValue('7')">
+			<input type="button" value="8" class="btn" onclick="buttonValue('8')">
+			<input type="button" value="9" class="btn" onclick="buttonValue('9')">
+			<input type="button" value="&plus;" class="btn opp" onclick="buttonValue('+')">
 
-		<div id="button">
-			<ul>
-				<li onclick=calculator("9")> 9 </li>
-				<li onclick=calculator(".")> . </li>
-				<li onclick=calculator("=")> = </li>
-				<li onclick=calculator("+")> + </li>
-				<li onclick=calculator("6")> 6 </li>
-				<li onclick=calculator("7")> 7 </li>
-				<li onclick=calculator("8")> 8 </li>
-				<li onclick=calculator("-")> - </li>
-				<li onclick=calculator("3")> 3 </li>
-				<li onclick=calculator("4")> 4 </li>
-				<li onclick=calculator("5")> 5 </li>
-				<li onclick=calculator("*")> x </li>
-				<li onclick=calculator("0")> 0 </li>
-				<li onclick=calculator("1")> 1 </li>
-				<li onclick=calculator("2")> 2 </li>
-				<li onclick=calculator("/")> / </li>
-			</ul>
-		</div> <!-- end of button div -->			
+			<input type="button" value="4" class="btn" onclick="buttonValue('4')">
+			<input type="button" value="5" class="btn" onclick="buttonValue('5')">
+			<input type="button" value="6" class="btn" onclick="buttonValue('6')">
+			<input type="button" value="&minus;" class="btn opp" onclick="buttonValue('-')">
 
-	</div><!-- end of container -->
+			<input type="button" value="1" class="btn" onclick="buttonValue('1')">
+			<input type="button" value="2" class="btn" onclick="buttonValue('2')">
+			<input type="button" value="3" class="btn" onclick="buttonValue('3')">
+			<input type="button" value="&equals;" id="equal" onclick="answer()">
 
-
-
+			<input type="button" value="0" id="zeroButton" onclick="buttonValue('0')">
+			<input type="button" value="&period;" class="btn" onclick="buttonValue('.')">
+		</form>
+	</div>
 
 
 </body>
 
+<script type="text/javascript" src="js/script.js"></script>
+
+
 </html>
+
+<!-- 
+
+1.  <input type="text" id="display_answer" disabled> 
+	- The <input> allows users to enter date. It is assined the ID of "diplay_answer", this is used to manipulate the CSS and javascript files.
+	- The 'type' attribute set the type of data that can be entered. In this case the input will take in text. 
+	- The 'disabled' attribute prevents user from changing the answer when displayed on screen
+
+2. 	Create buttons for;
+	- numbers ('0', '1', '2'...'9')
+	- operators ('+', '-', '*', '/')
+	- backspace (back)
+	We can do this by adding <input> tags for each button. We can use the <br> to start new row. 
+
+	<input type="button" value="C" id="btn" onclick="buttonValue('c')">
+	- We use the type attribute 'button' to create buttons and assign the 'value' to "C". "C" will appear on the button. 
+	- We give it an ID of 'btn' for styling in CSS.
+	The 'onclick()' event is added and assined the function 'buttonValue()' which will be defined in our javascript file.
+
+	<input type="button" value="3" id="equal" onclick="answer()">
+	- This will use the javascript eval() to do the maths.
+
+
+
+
+
+
+
+
+
+stuff to revise 
+* <forms>
+* <imputs>
+
+
+
+
+-->

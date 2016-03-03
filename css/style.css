@@ -1,66 +1,92 @@
-/* Reset styles */
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300);
+/*Global*/
 
 *{
-	list-style-type: none;
-	margin: 0px;
-	padding: 0px;
-	font-family: sans-serif;
+	margin: 0;
+	padding: 0;	
+	box-sizing: border-box;	
+	border-width: 1px;
+	border-color: #353535;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	font-size: 25px;
+	color: #A6A6A6;
+
+}
+html{background: #333333;
+}
+
+input:focus {
+	outline:0 !important;
+}
+input:active {
+  border-style: outset;
+}
+
+/*container*/
+
+#cal_Container{
+	width: 350px;
+	margin: 70px auto;}
+
+/*bottons*/
+
+#display_answer{
+	width: 350px;
+	height: 105px;
+	font-size: 40px;
+	text-align: right;
+	padding: 20px;
+	padding-right: 30px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	background: #161616;
 	color: #fff;
 }
-
-/* main style */
-
-body{
-	background: #DD2984;
-}
-
-h1{
-	margin-top: 0px;
-	padding-top: 0px;
-}
-
-#container{
-	background: #BB1F70;
-	width: 500px;
-	margin: 100px auto 0;
-	border-radius: 10px;
-	padding: 20px;
-
-}
-
-#container #button{
-	overflow: auto;
-	font-size: 20px;
-}
-
-#container #button li{
-	float: left;
-	background: #AA1D64;
-	width: 23%;
-	margin: 1%;
+.btn{
+	width: 25%;
 	height: 80px;
-	line-height: 80px;
-	text-align: center;
-	font-size: 30px;
-	cursor: pointer;
-	box-shadow: 0px 3px 0px #871851;
-}
-#container #button li:active{
-	box-shadow: 0px 1px 0px #871851; 
-}
-#clear{
 	float: left;
-	background: #AA1D64;
-	width: 23%;
-	margin: 1%;
-	height: 80px;
-	line-height: 80px;
-	text-align: center;
-	font-size: 30px;
-	cursor: pointer;
-	box-shadow: 0px 3px 0px #871851;
+	display: block;
+	background: #2E2E2E;
 }
 
-input{
-	color: black;
+#zeroButton{
+	width: 50%;
+	height: 80px;
+	float: left;
+	background: #2E2E2E;
+
+}
+#clearButton{
+	width: 50%;
+	height: 80px;
+	float: left;
+	background: #252525;
+	font-size: 18px;
+} 
+
+
+#equal{
+	width: 25%;
+	height: 160px;
+	float: right;
+	display: block;
+	background-color: #EB8130;
+	color: white;
+
+}
+
+#title{
+	font-size: 9px;
+	position: relative;
+	left: 7px;
+	top: 17px;
+	color: #5C5C5C;
+}
+
+.opp{
+	background: #252525;
+
+
 }
